@@ -12,7 +12,8 @@ function initializeGrid(x) {
             gridColumn.id = "gridColumn-" + i + "-" + j;
             gridColumn.style.padding = (100/(2*x)) + "%";
             gridColumn.addEventListener("mouseover", function(e) {
-                e.target.style.background = "black";
+                let randomColor = Math.floor(Math.random()*16777215).toString(16);
+                e.target.style.background = "#" + randomColor;
             });
             gridRow.appendChild(gridColumn);
         }
